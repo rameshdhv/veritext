@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --primary: #9ed700; /* Darker lemon green */
+  --primary-hover: #8bc100; /* Even darker lemon green for hover states */
+  --primary-foreground: #111111; /* Dark text on lemon green for readability */
+  --accent: #d1e986; /* Softer light green accent */
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-accent: var(--accent);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #ffffff; /* Keep white background even in dark mode */
+    --foreground: #171717; /* Dark text */
+    --primary: #9ed700; /* Darker lemon green */
+    --primary-hover: #8bc100;
+    --primary-foreground: #111111;
+    --accent: #d1e986;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
